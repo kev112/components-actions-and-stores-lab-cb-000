@@ -5,6 +5,9 @@ import bandReducer from './reducers/band_reducer'
 
 const store = createStore(bandReducer);
 
-function render(){
-  ReactDOM.render(<BandInput store={store} />, document.getElementById('container'))
+const renderApp = () => {
+  ReactDOM.render(<BandInput store={store}/>, document.getElementById('container'))
 }
+ 
+store.subscribe(renderApp);
+store.dispatch({})
