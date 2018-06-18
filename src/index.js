@@ -8,6 +8,6 @@ const store = createStore(bandReducer);
 const renderApp = () => {
   ReactDOM.render(<BandInput store={store}/>, document.getElementById('container'))
 }
- 
+
 store.subscribe(renderApp);
 store.dispatch({})
